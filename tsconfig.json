@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    // Paths and module resolution
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+
+    // Target environment
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "preserve",
+
+    // Strictness
+    "strict": true,
+    "strictNullChecks": true,
+    "isolatedModules": true,
+
+    // Interop and compatibility
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    // Output and build
+    "incremental": true,
+    "noEmit": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
