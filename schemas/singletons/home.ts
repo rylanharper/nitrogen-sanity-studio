@@ -1,16 +1,16 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'home',
   type: 'document',
   fields: [
     defineField({
-      title: 'Name',
-      name: 'name',
-      type: 'string'
+      title: 'Description',
+      name: 'description',
+      type: 'portableText'
     })
   ],
   preview: {
     prepare: () => ({ title: 'Home' })
   }
-})
+});

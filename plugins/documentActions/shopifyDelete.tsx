@@ -12,9 +12,7 @@ import { TrashIcon } from '@sanity/icons';
 
 import { SANITY_API_VERSION } from '../../constants';
 
-export default (
-  props: ShopifyDocumentActionProps,
-): DocumentActionDescription | undefined => {
+export default (props: ShopifyDocumentActionProps): DocumentActionDescription | undefined => {
   const { draft, onComplete, type, published }: {
     draft: ShopifyDocument;
     onComplete: () => void;
@@ -26,7 +24,7 @@ export default (
 
   const router = useRouter();
   const toast = useToast();
-  const client = useClient({apiVersion: SANITY_API_VERSION});
+  const client = useClient({ apiVersion: SANITY_API_VERSION });
 
   let dialog: DocumentActionConfirmDialogProps | null = null;
 
@@ -57,7 +55,7 @@ export default (
                 _type == "productVariant"
                 && store.productId == $productId
               ]._id`,
-            {productId},
+            { productId }
           );
         }
 
@@ -81,21 +79,21 @@ export default (
         try {
           await transaction.commit();
           // Navigate back to products root
-          router.navigateUrl({path: '/structure/products'});
+          router.navigateUrl({ path: '/structure/products' });
         } catch (err) {
           let message = 'Unknown Error';
           if (err instanceof Error) message = err.message;
 
           toast.push({
             status: 'error',
-            title: message,
+            title: message
           });
         } finally {
           // Signal that the action is complete
           onComplete();
         }
       },
-      type: 'confirm',
+      type: 'confirm'
     };
   }
 
@@ -115,6 +113,7 @@ export default (
       onConfirm: async () => {
         // Delete current document (including draft)
         const transaction = client.transaction();
+        
         if (published?._id) {
           transaction.delete(published._id);
         }
@@ -125,27 +124,25 @@ export default (
         try {
           await transaction.commit();
           // Navigate back to collections root
-          router.navigateUrl({path: '/structure/collections'});
+          router.navigateUrl({ path: '/structure/collections' });
         } catch (err) {
           let message = 'Unknown Error';
           if (err instanceof Error) message = err.message;
 
           toast.push({
             status: 'error',
-            title: message,
+            title: message
           });
         } finally {
           // Signal that the action is complete
           onComplete();
         }
       },
-      type: 'confirm',
+      type: 'confirm'
     };
   }
 
-  if (!dialog) {
-    return;
-  }
+  if (!dialog) return;
 
   return {
     tone: 'critical',
@@ -153,6 +150,6 @@ export default (
     icon: TrashIcon,
     label: 'Delete',
     onHandle: () => setDialogOpen(true),
-    shortcut: 'Ctrl+Alt+D',
+    shortcut: 'Ctrl+Alt+D'
   };
 };

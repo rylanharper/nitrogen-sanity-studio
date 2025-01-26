@@ -1,20 +1,21 @@
-import { forwardRef, useState } from 'react'
-import { CloseIcon, ImageIcon, WarningOutlineIcon } from '@sanity/icons'
+import { forwardRef, useState } from 'react';
+import { CloseIcon, ImageIcon, WarningOutlineIcon } from '@sanity/icons';
 
 type Props = {
-  isActive?: boolean
-  isDeleted: boolean
-  title: string
-  type: 'collection' | 'product' | 'productVariant'
-  url: string
-}
+  isActive?: boolean;
+  isDeleted: boolean;
+  title: string;
+  type: 'collection' | 'product' | 'productVariant';
+  url: string;
+};
 
-export const ShopifyDocumentStatus = forwardRef<HTMLDivElement, Props>((props, ref) => {
-    const { isActive, isDeleted, type, url, title } = props
-    const [imageVisible, setImageVisible] = useState(true)
+export const ShopifyDocumentStatus = forwardRef<HTMLDivElement, Props>(
+  (props, ref) => {
+    const { isActive, isDeleted, type, url, title } = props;
+    const [imageVisible, setImageVisible] = useState(true);
 
     // Hide image on error / 404
-    const handleImageError = () => setImageVisible(false)
+    const handleImageError = () => setImageVisible(false);
 
     return (
       <div
@@ -75,8 +76,8 @@ export const ShopifyDocumentStatus = forwardRef<HTMLDivElement, Props>((props, r
           </>
         )}
       </div>
-    )
+    );
   }
-)
+);
 
-ShopifyDocumentStatus.displayName = 'ShopifyDocumentStatus'
+ShopifyDocumentStatus.displayName = 'ShopifyDocumentStatus';

@@ -1,16 +1,16 @@
 import type { StructureResolver } from 'sanity/structure';
 
-import home from './home'
-import products from './products'
-import collections from './collections'
+import home from './home';
+import products from './products';
+import collections from './collections';
 
-export const structure: StructureResolver = (S, context) =>
+export const structure: StructureResolver = (S, ctx) =>
   S.list()
     .title('Content')
     .items([
-      home(S, context),
+      home(S, ctx),
       S.divider(),
-      collections(S, context),
-      products(S, context),
+      collections(S, ctx),
+      products(S, ctx),
       S.divider()
-    ])
+    ]);

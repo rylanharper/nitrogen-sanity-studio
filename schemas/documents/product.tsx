@@ -1,18 +1,24 @@
-import { defineField, defineType } from 'sanity'
-import pluralize from 'pluralize-esm'
+import { defineField, defineType } from 'sanity';
+import { NotePencil, ShoppingCart } from '@phosphor-icons/react';
+import pluralize from 'pluralize-esm';
 
-import { ShopifyIcon } from '../../components/icons/Shopify'
-import { ProductHiddenInput } from '../../components/shopify/ProductHidden'
-import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus'
-import { getPriceRange } from '../../utils/getPriceRange'
+import { ProductHiddenInput } from '../../components/shopify/ProductHidden';
+import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus';
+import { getPriceRange } from '../../utils/getPriceRange';
 
 const GROUPS = [
   {
+    default: true,
+    name: 'editorial',
+    title: 'Editorial',
+    icon: NotePencil
+  },
+  {
     name: 'shopifySync',
     title: 'Shopify sync',
-    icon: ShopifyIcon
+    icon: ShoppingCart
   }
-]
+];
 
 export default defineType({
   name: 'product',
@@ -28,19 +34,17 @@ export default defineType({
       },
       group: GROUPS.map((group) => group.name),
       hidden: ({ parent }) => {
-        const isActive = parent?.store?.status === 'active'
-        const isDeleted = parent?.store?.isDeleted
-        return !parent?.store || (isActive && !isDeleted)
+        const isActive = parent?.store?.status === 'active';
+        const isDeleted = parent?.store?.isDeleted;
+        return !parent?.store || (isActive && !isDeleted);
       }
     }),
-    // Title (proxy)
     defineField({
       name: 'titleProxy',
       title: 'Title',
       type: 'proxyString',
       options: { field: 'store.title' }
     }),
-    // Slug (proxy)
     defineField({
       name: 'slugProxy',
       title: 'Slug',
@@ -53,6 +57,12 @@ export default defineType({
       type: 'shopifyProduct',
       description: 'Product data from Shopify (read-only)',
       group: 'shopifySync'
+    }),
+    defineField({
+      title: 'Description',
+      name: 'description',
+      type: 'portableText',
+      group: 'editorial'
     })
   ],
   orderings: [
@@ -97,23 +107,23 @@ export default defineType({
         status,
         title,
         variants
-      } = selection
+      } = selection;
 
-      const optionCount = options?.length
-      const variantCount = variants?.length
+      const optionCount = options?.length;
+      const variantCount = variants?.length;
 
       const description = [
         variantCount ? pluralize('variant', variantCount, true) : 'No variants',
         optionCount ? pluralize('option', optionCount, true) : 'No options'
-      ]
+      ];
 
-      let subtitle = getPriceRange(priceRange)
+      let subtitle = getPriceRange(priceRange);
 
       if (status !== 'active') {
-        subtitle = '(Unavailable in Shopify)'
+        subtitle = '(Unavailable in Shopify)';
       }
       if (isDeleted) {
-        subtitle = '(Deleted from Shopify)'
+        subtitle = '(Deleted from Shopify)';
       }
 
       return {
@@ -129,7 +139,7 @@ export default defineType({
             url={previewImageUrl}
           />
         )
-      }
+      };
     }
   }
-})
+});

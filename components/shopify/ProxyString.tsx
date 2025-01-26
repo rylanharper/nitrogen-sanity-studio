@@ -11,7 +11,6 @@ type Props = StringInputProps<
 
 export const ProxyStringInput = (props: Props) => {
   const { schemaType } = props
-
   const path = schemaType?.options?.field
   const doc = useFormValue([]) as SanityDocument
   const proxyValue = path ? (get(doc, path) as string) : ''

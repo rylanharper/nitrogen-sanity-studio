@@ -1,17 +1,17 @@
-import { ListItemBuilder } from 'sanity/structure'
-import { HomeIcon } from '@sanity/icons'
+import { ListItemBuilder } from 'sanity/structure';
+import { HouseLine } from '@phosphor-icons/react';
 
-import defineStructure from '../utils/defineStructure'
+import defineStructure from '../utils/defineStructure';
 
 export default defineStructure<ListItemBuilder>((S) =>
   S.listItem()
     .title('Home')
     .schemaType('home')
-    .icon(HomeIcon)
+    .icon(HouseLine)
     .child(
-      S.editor()
+      S.document()
       .title('Home')
       .schemaType('home')
       .documentId('home')
     )
-)
+);

@@ -1,32 +1,30 @@
-import { defineField, defineType } from 'sanity'
-import { PackageIcon } from '@sanity/icons'
-import pluralize from 'pluralize-esm'
+import { defineField, defineType } from 'sanity';
+import { Newspaper, ShoppingCart } from '@phosphor-icons/react';
+import pluralize from 'pluralize-esm';
 
-import { ShopifyIcon } from '../../components/icons/Shopify'
-import { CollectionHiddenInput } from '../../components/shopify/CollectionHidden'
-import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus'
+import { CollectionHiddenInput } from '../../components/shopify/CollectionHidden';
+import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus';
 
 const GROUPS = [
   {
     default: true,
     name: 'editorial',
-    title: 'Editorial'
+    title: 'Editorial',
+    icon: Newspaper
   },
   {
     name: 'shopifySync',
     title: 'Shopify sync',
-    icon: ShopifyIcon
+    icon: ShoppingCart
   }
-]
+];
 
 export default defineType({
   name: 'collection',
   title: 'Collection',
   type: 'document',
-  icon: PackageIcon,
   groups: GROUPS,
   fields: [
-    // Product hidden status
     defineField({
       name: 'hidden',
       type: 'string',
@@ -34,31 +32,34 @@ export default defineType({
         field: CollectionHiddenInput
       },
       hidden: ({ parent }) => {
-        const isDeleted = parent?.store?.isDeleted
-        return !isDeleted
+        const isDeleted = parent?.store?.isDeleted;
+        return !isDeleted;
       }
     }),
-    // Title (proxy)
     defineField({
       name: 'titleProxy',
       title: 'Title',
       type: 'proxyString',
       options: { field: 'store.title' }
     }),
-    // Slug (proxy)
     defineField({
       name: 'slugProxy',
       title: 'Slug',
       type: 'proxyString',
       options: { field: 'store.slug.current' }
     }),
-    // Shopify collection
     defineField({
       name: 'store',
       title: 'Shopify',
       type: 'shopifyCollection',
       description: 'Collection data from Shopify (read-only)',
       group: 'shopifySync'
+    }),
+    defineField({
+      title: 'Description',
+      name: 'description',
+      type: 'portableText',
+      group: 'editorial'
     })
   ],
   orderings: [
@@ -81,8 +82,8 @@ export default defineType({
       title: 'store.title'
     },
     prepare(selection) {
-      const { imageUrl, isDeleted, rules, title } = selection
-      const ruleCount = rules?.length || 0
+      const { imageUrl, isDeleted, rules, title } = selection;
+      const ruleCount = rules?.length || 0;
 
       return {
         media: (
@@ -98,7 +99,7 @@ export default defineType({
             ? `Automated (${pluralize('rule', ruleCount, true)})`
             : 'Manual',
         title
-      }
+      };
     }
   }
-})
+});

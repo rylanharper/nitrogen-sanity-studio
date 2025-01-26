@@ -1,4 +1,4 @@
-import { defineField } from 'sanity'
+import { defineField } from 'sanity';
 
 export default defineField({
   name: 'inventory',
@@ -8,23 +8,20 @@ export default defineField({
     columns: 3
   },
   fields: [
-    // Available
     defineField({
       name: 'isAvailable',
       title: 'Available',
       type: 'boolean'
     }),
-    // Management
     defineField({
       name: 'management',
       title: 'Management',
       type: 'string'
     }),
-    // Policy
     defineField({
       name: 'policy',
       title: 'Policy',
       type: 'string'
     })
   ]
-})
+});

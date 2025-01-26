@@ -1,5 +1,5 @@
-import { SparkleIcon } from '@sanity/icons'
-import { defineArrayMember, defineField } from 'sanity'
+import { defineArrayMember, defineField } from 'sanity';
+import { SparkleIcon } from '@sanity/icons';
 
 export default defineField({
   title: 'Product option',
@@ -8,13 +8,11 @@ export default defineField({
   icon: SparkleIcon,
   readOnly: true,
   fields: [
-    // Name
     defineField({
       title: 'Name',
       name: 'name',
       type: 'string'
     }),
-    // Values
     defineField({
       title: 'Values',
       name: 'values',
@@ -27,11 +25,11 @@ export default defineField({
       name: 'name'
     },
     prepare(selection) {
-      const { name } = selection
+      const { name } = selection;
 
       return {
         title: name
-      }
+      };
     }
   }
-})
+});
