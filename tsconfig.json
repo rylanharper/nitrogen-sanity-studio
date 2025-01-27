@@ -6,6 +6,9 @@
     "moduleResolution": "bundler",
     "moduleDetection": "force",
     "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
 
     // Target environment
     "target": "esnext",
