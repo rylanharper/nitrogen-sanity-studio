@@ -9,7 +9,7 @@ A minimal Sanity studio built for [Nitrogen](https://github.com/rylanharper/nitr
 
 I recommend reading through the [Sanity and Shopify with Hydrogen](https://www.sanity.io/learn/course/sanity-and-shopify-with-hydrogen) to learn the basics of how to connect your Sanity dataset with your Shopify store data.
 
-To begin using this studio template, you'll need to set up the following environment variables:
+To begin using this studio template, you'll need to add the following environment variables:
 
 ```ini
 # Sanity
