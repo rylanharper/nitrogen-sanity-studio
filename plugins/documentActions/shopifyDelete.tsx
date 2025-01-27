@@ -10,7 +10,7 @@ import { useRouter } from 'sanity/router';
 import { Stack, Text, useToast } from '@sanity/ui';
 import { TrashIcon } from '@sanity/icons';
 
-import { SANITY_API_VERSION } from '../../constants';
+import { SANITY_API_VERSION } from '@/constants';
 
 export default (props: ShopifyDocumentActionProps): DocumentActionDescription | undefined => {
   const { draft, onComplete, type, published }: {

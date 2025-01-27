@@ -1,6 +1,6 @@
 import { defineField } from 'sanity';
 import { ArrowSquareOut, LinkSimple } from '@phosphor-icons/react';
-import { PAGE_REFERENCES } from '../../../constants';
+import { PAGE_REFERENCES } from '@/constants';
 
 export const annotations = [
   {
@@ -14,10 +14,10 @@ export const annotations = [
         title: 'URL',
         description: 'Enter an external URL path',
         type: 'string',
-        validation: Rule => Rule.uri({
-          allowRelative: true,
-          scheme: ['http', 'https', 'mailto', 'tel']
-        })
+        validation: (Rule) =>
+          Rule.required().uri({
+            scheme: ['http', 'https', 'mailto', 'tel']
+          })
       }),
       defineField({
         name: 'newTab',

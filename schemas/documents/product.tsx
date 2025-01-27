@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity';
-import { NotePencil, ShoppingCart } from '@phosphor-icons/react';
+import { NotePencil } from '@phosphor-icons/react';
 import pluralize from 'pluralize-esm';
 
-import { ProductHiddenInput } from '../../components/shopify/ProductHidden';
-import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus';
-import { getPriceRange } from '../../utils/getPriceRange';
+import { ShopifyIcon } from '@/components/icons/Shopify';
+import { ProductHiddenInput } from '@/components/shopify/ProductHidden';
+import { ShopifyDocumentStatus } from '@/components/shopify/ShopifyDocumentStatus';
+import { getPriceRange } from '@/utils/getPriceRange';
 
 const GROUPS = [
   {
@@ -16,7 +17,7 @@ const GROUPS = [
   {
     name: 'shopifySync',
     title: 'Shopify sync',
-    icon: ShoppingCart
+    icon: ShopifyIcon
   }
 ];
 

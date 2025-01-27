@@ -1,4 +1,4 @@
-import { SHOPIFY_STORE_ID } from '../constants';
+import { SHOPIFY_STORE_ID } from '@/constants';
 
 export const collectionUrl = (collectionId: number) => {
   if (!SHOPIFY_STORE_ID) return null;

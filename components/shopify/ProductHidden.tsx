@@ -3,7 +3,7 @@ import type { StringFieldProps } from 'sanity';
 import { useFormValue } from 'sanity';
 import { Box, Card, Flex, Stack, Text } from '@sanity/ui';
 import { WarningOutlineIcon } from '@sanity/icons';
-import { productUrl } from '../../utils/shopifyUrls';
+import { productUrl } from '@/utils/shopifyUrls';
 
 type Store = {
   id: number;

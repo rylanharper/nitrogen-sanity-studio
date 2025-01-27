@@ -2,9 +2,9 @@ export function ShopifyIcon() {
   return (
     <svg
       fill="none"
-      height="18"
-      width="18"
-      viewBox="0 0 18 20"
+      height="16"
+      width="16"
+      viewBox="0 0 16 20"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

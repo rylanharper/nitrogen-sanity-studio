@@ -1,7 +1,7 @@
 import { defineField } from 'sanity';
 
 import { LinkSimple } from '@phosphor-icons/react'
-import { PAGE_REFERENCES } from '../../../constants';
+import { PAGE_REFERENCES } from '@/constants';
 
 export default defineField({
   name: 'linkInternal',

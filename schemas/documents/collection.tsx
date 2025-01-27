@@ -1,21 +1,22 @@
 import { defineField, defineType } from 'sanity';
-import { Newspaper, ShoppingCart } from '@phosphor-icons/react';
+import { NotePencil } from '@phosphor-icons/react';
 import pluralize from 'pluralize-esm';
 
-import { CollectionHiddenInput } from '../../components/shopify/CollectionHidden';
-import { ShopifyDocumentStatus } from '../../components/shopify/ShopifyDocumentStatus';
+import { ShopifyIcon } from '@/components/icons/Shopify';
+import { CollectionHiddenInput } from '@/components/shopify/CollectionHidden';
+import { ShopifyDocumentStatus } from '@/components/shopify/ShopifyDocumentStatus';
 
 const GROUPS = [
   {
     default: true,
     name: 'editorial',
     title: 'Editorial',
-    icon: Newspaper
+    icon: NotePencil
   },
   {
     name: 'shopifySync',
     title: 'Shopify sync',
-    icon: ShoppingCart
+    icon: ShopifyIcon
   }
 ];
 

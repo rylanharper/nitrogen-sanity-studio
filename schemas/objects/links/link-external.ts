@@ -1,4 +1,5 @@
 import { defineField } from 'sanity';
+
 import { ArrowSquareOut } from '@phosphor-icons/react';
 
 export default defineField({
@@ -18,8 +19,7 @@ export default defineField({
       description: 'Enter an external URL path',
       type: 'string',
       validation: (Rule) =>
-        Rule.uri({
-          allowRelative: true,
+        Rule.required().uri({
           scheme: ['http', 'https', 'mailto', 'tel']
         })
     }),
