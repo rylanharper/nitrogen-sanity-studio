@@ -2,6 +2,7 @@ import { defineConfig, isDev } from 'sanity';
 
 // Plugins
 import { structureTool } from 'sanity/structure';
+import { presentationTool } from 'sanity/presentation';
 import { visionTool } from '@sanity/vision';
 import { colorInput } from '@sanity/color-input';
 import { media } from 'sanity-plugin-media';
@@ -27,6 +28,17 @@ export default defineConfig({
   plugins: [
     structureTool({
       structure
+    }),
+    presentationTool({
+      previewUrl: {
+        origin: isDev
+          ? 'http://localhost:3000'
+          : process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
+        previewMode: {
+          enable: '/preview/enable',
+          disable: '/preview/disable'
+        }
+      }
     }),
     media(),
     colorInput(),
