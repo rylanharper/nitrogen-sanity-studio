@@ -1,6 +1,6 @@
 {
+  "name": "nitrogen-studio",
   "private": true,
-  "main": "package.json",
   "scripts": {
     "dev": "sanity dev",
     "build": "sanity build",
@@ -11,22 +11,22 @@
     "@sanity/color-input": "^4.0.3",
     "@sanity/dashboard": "^4.1.2",
     "@sanity/icons": "^3.5.7",
-    "@sanity/ui": "^2.11.4",
-    "@sanity/vision": "^3.71.2",
+    "@sanity/ui": "^2.12.2",
+    "@sanity/vision": "^3.74.1",
     "lodash.get": "^4.4.2",
     "pluralize-esm": "^9.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
-    "sanity": "^3.71.2",
+    "sanity": "^3.74.1",
     "sanity-plugin-media": "^2.3.2",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^5.0.1",
-    "@sanity/types": "3.71.2",
+    "@sanity/types": "3.74.1",
     "@types/react": "^18.3.18",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.15.4"
