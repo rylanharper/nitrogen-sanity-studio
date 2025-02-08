@@ -5,7 +5,7 @@ type Props = {
   isActive?: boolean;
   isDeleted: boolean;
   title: string;
-  type: 'collection' | 'product' | 'productVariant';
+  type: 'collection' | 'product';
   url: string;
 };
 
