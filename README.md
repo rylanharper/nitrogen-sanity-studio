@@ -15,6 +15,7 @@ To begin using this studio template, you'll need to add the following environmen
 # Sanity
 SANITY_STUDIO_PROJECT_ID=gibvd6r4
 SANITY_STUDIO_DATASET=production
+SANITY_STUDIO_PREVIEW_URL=https://nitrogenshop.netlify.app
 ```
 
 ### Development
