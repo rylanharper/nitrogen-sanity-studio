@@ -34,10 +34,11 @@ export const annotations = [
     icon: LinkSimple,
     fields: [
       defineField({
-        name: 'linkTarget',
-        title: 'Internal Link',
+        name: 'reference',
+        title: 'Reference',
         type: 'reference',
-        to: PAGE_REFERENCES
+        to: PAGE_REFERENCES,
+        validation: (Rule) => Rule.required()
       })
     ]
   }

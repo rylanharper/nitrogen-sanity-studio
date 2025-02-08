@@ -10,13 +10,13 @@ export default defineField({
   icon: LinkSimple,
   fields: [
     defineField({
-      name: 'label',
-      title: 'Label',
+      name: 'title',
+      title: 'Title',
       type: 'string'
     }),
     defineField({
-      name: 'linkTarget',
-      title: 'Internal Link',
+      name: 'reference',
+      title: 'Reference',
       type: 'reference',
       to: PAGE_REFERENCES,
       validation: (Rule) => Rule.required()
@@ -24,14 +24,14 @@ export default defineField({
   ],
   preview: {
     select: {
-      label: 'label',
-      targetTitle: 'linkTarget.title'
+      title: 'title',
+      referenceTitle: 'reference.title'
     },
     prepare(selection) {
-      const { label, targetTitle } = selection;
+      const { title, referenceTitle } = selection;
 
       return {
-        title: label ?? targetTitle,
+        title: title ?? referenceTitle,
         media: LinkSimple
       }
     }

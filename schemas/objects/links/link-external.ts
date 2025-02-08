@@ -9,8 +9,8 @@ export default defineField({
   icon: ArrowSquareOut,
   fields: [
     defineField({
-      name: 'label',
-      title: 'Label',
+      name: 'title',
+      title: 'Title',
       type: 'string'
     }),
     defineField({
@@ -32,17 +32,17 @@ export default defineField({
   ],
   preview: {
     select: {
-      label: 'label',
+      title: 'title',
       url: 'url',
       newTab: 'newTab'
     },
     prepare(selection) {
-      const { label, url, newTab } = selection;
+      const { title, url, newTab } = selection;
 
       return {
         media: ArrowSquareOut,
-        subtitle: url,
-        title: `${label ?? 'Untitled Link'}${newTab ? ' (New Tab Link)' : ''}`
+        subtitle: `→ ${url}`,
+        title: `${title ?? 'Untitled Link'}${newTab ? ' (New Tab Link)' : ''}`
       };
     }
   }
