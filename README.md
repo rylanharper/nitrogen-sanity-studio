@@ -5,7 +5,7 @@ A minimal Sanity studio built for [Nitrogen](https://github.com/rylanharper/nitr
 > [!IMPORTANT]
 > This studio is a very minimal version of the default `--template shopify` by Sanity. It contains no `productVariant` document type or its corresponding helper functions.
 
-## 🏓 Sanity Setup
+## ⛺️ Sanity Setup
 
 I recommend reading through the [Sanity and Shopify with Hydrogen](https://www.sanity.io/learn/course/sanity-and-shopify-with-hydrogen) guide to learn the basics of how to connect your Sanity dataset with your Shopify store data.
 
@@ -23,12 +23,12 @@ SANITY_STUDIO_PREVIEW_URL=https://your-site-domain.com
 1. Install dependencies using `pnpm install`
 2. Start the development server using `pnpm dev`
 
-## 📣 Need Help?
+## 🌱 Contribute
 
-If you have any questions, encounter issues, or have suggestions for improvements, feel free to:
+Contributions are always welcome! If you’d like to help improve this project, here’s how you can get involved:
 
-- Post an issue: Use the [Issues tab](https://github.com/rylanharper/Nitrogen/issues) to report bugs or request new features.
-- Start a discussion: Share ideas or ask for help in the [Discussions tab](https://github.com/rylanharper/Nitrogen/discussions).
-- Contribute: If you’d like to contribute, fork the repository, make your changes, and submit a pull request for review.
+- Post an issue: Use the [Issues tab](https://github.com/rylanharper/nitrogen-sanity-studio/issues) to report bugs or request new features.
+- Start a discussion: Share ideas or ask for help in the [Discussions tab](https://github.com/rylanharper/nitrogen-sanity-studio/discussions).
+- Submit a Pull Request: If you’d like to contribute, fork the repository, make your changes, and submit a pull request for review.
 
-I actively monitor this repository and will do my best to respond quickly. Community feedback and contributions are always appreciated!
+I actively monitor this repository and will do my best to respond quickly. Whether it’s fixing a small typo or adding a new feature, every contribution helps!
