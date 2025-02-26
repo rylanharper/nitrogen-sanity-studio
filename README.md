@@ -5,9 +5,9 @@ A minimal Sanity studio built for [Nitrogen](https://github.com/rylanharper/nitr
 > [!IMPORTANT]
 > This studio is a very minimal version of the default `--template shopify` by Sanity. It contains no `productVariant` document type or its corresponding helper functions.
 
-## ⛺️ Sanity Setup
+## 💻 Development
 
-I recommend reading through the [Sanity and Shopify with Hydrogen](https://www.sanity.io/learn/course/sanity-and-shopify-with-hydrogen) guide to learn the basics of how to connect your Sanity dataset with your Shopify store data.
+I recommend reading through the official [Sanity and Shopify with Hydrogen](https://www.sanity.io/learn/course/sanity-and-shopify-with-hydrogen) guide to learn the basics of how to connect your Sanity dataset with your Shopify store data.
 
 To begin using this studio template, you'll need to add the following environment variables:
 
@@ -18,7 +18,10 @@ SANITY_STUDIO_DATASET=production
 SANITY_STUDIO_PREVIEW_URL=https://your-site-domain.com
 ```
 
-### Development
+> [!TIP]
+> `collection`, `product`, and `productVariant` are reserved schema document types that cannot be renamed.
+
+### Local Setup
 
 1. Install dependencies using `pnpm install`
 2. Start the development server using `pnpm dev`
