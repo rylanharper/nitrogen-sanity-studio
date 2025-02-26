@@ -19,7 +19,7 @@ SANITY_STUDIO_PREVIEW_URL=https://your-site-domain.com
 ```
 
 > [!TIP]
-> `collection`, `product`, and `productVariant` are reserved schema document types that cannot be renamed.
+> When using Sanity Connect, it should be known that `collection`, `product`, and `productVariant` are reserved schema document types that cannot be renamed.
 
 ### Local Setup
 
