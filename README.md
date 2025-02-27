@@ -18,9 +18,6 @@ SANITY_STUDIO_DATASET=production
 SANITY_STUDIO_PREVIEW_URL=https://your-site-domain.com
 ```
 
-> [!TIP]
-> When using Sanity Connect, it should be known that `collection`, `product`, and `productVariant` are reserved schema document types that cannot be renamed.
-
 ### Local Setup
 
 1. Install dependencies using `pnpm install`
