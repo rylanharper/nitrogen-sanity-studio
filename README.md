@@ -1,6 +1,6 @@
 # Nitrogen Sanity Studio
 
-A minimal Sanity studio built for [Nitrogen](https://github.com/rylanharper/nitrogen). This studio uses [Sanity Connect](https://www.sanity.io/docs/sanity-connect-for-shopify) to synchronize content between a Sanity dataset and your Shopify store.
+A minimal Sanity studio template built for [Nitrogen](https://github.com/rylanharper/nitrogen). This studio uses [Sanity Connect](https://www.sanity.io/docs/sanity-connect-for-shopify) to synchronize content between a Sanity dataset and your Shopify store.
 
 > [!IMPORTANT]
 > This studio is a very minimal version of the default `--template shopify` by Sanity. It contains no `productVariant` document type or its corresponding helper functions.
