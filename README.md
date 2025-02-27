@@ -13,7 +13,7 @@ To begin using this studio template, you'll need to add the following environmen
 
 ```ini
 # Sanity
-SANITY_STUDIO_PROJECT_ID=gibvd6r4
+SANITY_STUDIO_PROJECT_ID=your_project_id
 SANITY_STUDIO_DATASET=production
 SANITY_STUDIO_PREVIEW_URL=https://your-site-domain.com
 ```
