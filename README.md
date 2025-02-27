@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/rylanharper/nitrogen">
+    <img src="./public/logo.svg" width="175" height="175" alt="Nitrogen Logo" />
+  </a>
+</p>
+
 # Nitrogen Sanity Studio
 
 A minimal Sanity studio template built for [Nitrogen](https://github.com/rylanharper/nitrogen). This studio uses [Sanity Connect](https://www.sanity.io/docs/sanity-connect-for-shopify) to synchronize content between a Sanity dataset and your Shopify store.
