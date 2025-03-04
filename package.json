@@ -10,8 +10,8 @@
     "@phosphor-icons/react": "^2.1.7",
     "@sanity/color-input": "^4.0.3",
     "@sanity/dashboard": "^4.1.2",
-    "@sanity/icons": "^3.6.0",
-    "@sanity/ui": "^2.14.3",
+    "@sanity/icons": "^3.7.0",
+    "@sanity/ui": "^2.14.4",
     "@sanity/vision": "^3.77.2",
     "lodash.get": "^4.4.2",
     "pluralize-esm": "^9.0.5",
@@ -27,7 +27,7 @@
     "@sanity/types": "3.77.2",
     "@types/react": "^18.3.18",
     "eslint": "^9.21.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   },
   "packageManager": "pnpm@10.5.2"
 }
