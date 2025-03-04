@@ -15,7 +15,7 @@ export const SHOPIFY_DOCUMENT_TYPES = ['product', 'collection'];
 
 // API version to use when using the Sanity client within the studio.
 // https://www.sanity.io/help/studio-client-specify-api-version
-export const SANITY_API_VERSION = '2024-10-25';
+export const SANITY_API_VERSION = '2025-02-02';
 
 // Your Shopify store ID.
 // This is your unique store (e.g. 'my-store-name' in the complete URL of 'https://admin.shopify.com/store/my-store-name/').

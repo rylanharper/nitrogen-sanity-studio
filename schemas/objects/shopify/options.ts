@@ -9,13 +9,13 @@ export default defineField({
   readOnly: true,
   fields: [
     defineField({
-      title: 'Name',
       name: 'name',
+      title: 'Name',
       type: 'string'
     }),
     defineField({
-      title: 'Values',
       name: 'values',
+      title: 'Values',
       type: 'array',
       of: [defineArrayMember({ type: 'string' })]
     })

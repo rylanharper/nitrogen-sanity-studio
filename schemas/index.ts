@@ -9,8 +9,8 @@ import product from './documents/product';
 import portableText from './portableText/portableText'
 
 // Objects
-import linkExternal from './objects/links/link-external';
-import linkInternal from './objects/links/link-internal';
+import linkExternal from './objects/links/linkExternal';
+import linkInternal from './objects/links/linkInternal';
 import inventory from './objects/shopify/inventory';
 import options from './objects/shopify/options';
 import placeholderString from './objects/shopify/placeholderString';

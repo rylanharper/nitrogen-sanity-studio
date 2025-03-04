@@ -36,7 +36,7 @@ export const ProductHiddenInput = (props: StringFieldProps) => {
 
     return (
       <Card padding={4} radius={2} shadow={1} tone="critical">
-        <Flex align="flex-start">
+        <Flex align="center">
           <Text size={2}>
             <WarningOutlineIcon />
           </Text>

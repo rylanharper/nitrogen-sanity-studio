@@ -60,8 +60,8 @@ export default defineType({
       group: 'shopifySync'
     }),
     defineField({
-      title: 'Description',
       name: 'description',
+      title: 'Description',
       type: 'portableText',
       group: 'editorial'
     })

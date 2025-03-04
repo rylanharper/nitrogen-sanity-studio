@@ -8,13 +8,13 @@ import { colorInput } from '@sanity/color-input';
 import { media } from 'sanity-plugin-media';
 
 // Custom plugins
-import { documentActions } from './plugins/documentActions';
+import { documentActions } from './plugins/documents';
 
 // Schemas
 import { structure } from './structure';
 import { schemaTypes } from './schemas';
 
-// Define dev plugins
+// Dev plugins
 const devPlugins = [visionTool()];
 
 // Config
