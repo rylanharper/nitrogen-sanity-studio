@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/rylanharper/nitrogen">
-    <img src="./public/logo.svg" width="175" height="175" alt="Nitrogen Logo" />
+    <img src="./public/logo.svg" width="145" height="145" alt="Nitrogen Logo" />
   </a>
 </p>
 
