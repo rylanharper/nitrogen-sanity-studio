@@ -1,0 +1,11 @@
+import { SHOPIFY_STORE_ID } from '@/src/constants'
+
+export const collectionUrl = (collectionId: number) => {
+  if (!SHOPIFY_STORE_ID) return null
+  return `https://admin.shopify.com/store/${SHOPIFY_STORE_ID}/collections/${collectionId}`
+}
+
+export const productUrl = (productId: number) => {
+  if (!SHOPIFY_STORE_ID) return null
+  return `https://admin.shopify.com/store/${SHOPIFY_STORE_ID}/products/${productId}`
+}

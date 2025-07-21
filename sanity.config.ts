@@ -1,21 +1,22 @@
-import { defineConfig, isDev } from 'sanity';
+import { defineConfig, isDev } from 'sanity'
 
 // Plugins
-import { structureTool } from 'sanity/structure';
-import { presentationTool } from 'sanity/presentation';
-import { visionTool } from '@sanity/vision';
-import { colorInput } from '@sanity/color-input';
-import { media } from 'sanity-plugin-media';
+import { assist } from '@sanity/assist'
+import { visionTool } from '@sanity/vision'
+import { colorInput } from '@sanity/color-input'
+import { structureTool } from 'sanity/structure'
+import { presentationTool } from 'sanity/presentation'
+import { media } from 'sanity-plugin-media'
 
 // Custom plugins
-import { documentActions } from './plugins/documents';
+import { documentActions } from '@/src/plugins/document-actions'
 
 // Schemas
-import { structure } from './structure';
-import { schemaTypes } from './schemas';
+import { structure } from '@/src/structure'
+import { schemaTypes } from '@/src/schemas'
 
 // Dev plugins
-const devPlugins = [visionTool()];
+const devPlugins = [visionTool()]
 
 // Config
 export default defineConfig({
@@ -27,7 +28,7 @@ export default defineConfig({
 
   plugins: [
     structureTool({
-      structure
+      structure,
     }),
     presentationTool({
       previewUrl: {
@@ -36,17 +37,18 @@ export default defineConfig({
           : process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
         previewMode: {
           enable: '/preview/enable',
-          disable: '/preview/disable'
-        }
-      }
+          disable: '/preview/disable',
+        },
+      },
     }),
     media(),
+    assist(),
     colorInput(),
     documentActions(),
-    ...(isDev ? devPlugins : [])
+    ...(isDev ? devPlugins : []),
   ],
 
   schema: {
-    types: schemaTypes
-  }
-});
+    types: schemaTypes,
+  },
+})
